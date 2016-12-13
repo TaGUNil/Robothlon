@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1250</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Роботлон</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="centralVerticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="controlsHorizontalLayout">
+      <item>
+       <widget class="QPushButton" name="uploadPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Загрузить настройки</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="resetPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Сброс</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Старт</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pausePushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Пауза</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Стоп</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="leftControlsHorizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLCDNumber" name="clockLcdNumber">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="numDigits">
+         <number>8</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="rightControlsHorizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QComboBox" name="serialPortComboBox"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="connectPushButton">
+        <property name="text">
+         <string>Подключиться</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="disconnectPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Отключиться</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="devicesHorizontalLayout">
+      <item>
+       <widget class="QGroupBox" name="tankGroupBox">
+        <property name="title">
+         <string>Танки</string>
+        </property>
+        <layout class="QVBoxLayout" name="tankVerticalLayout">
+         <item>
+          <widget class="QTableWidget" name="tankTableWidget">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::NoSelection</enum>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>90</number>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Группа</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Статус</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Жизнь</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В бою</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="turretGroupBox">
+        <property name="title">
+         <string>Турели</string>
+        </property>
+        <layout class="QVBoxLayout" name="turretVerticalLayout">
+         <item>
+          <widget class="QTableWidget" name="turretTableWidget">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::NoSelection</enum>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>90</number>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Группа</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Статус</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Жизнь</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В бою</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="targetGroupBox">
+        <property name="title">
+         <string>Мишени</string>
+        </property>
+        <layout class="QVBoxLayout" name="targetVerticalLayout">
+         <item>
+          <widget class="QTableWidget" name="targetTableWidget">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::NoSelection</enum>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>90</number>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Группа</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Статус</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Жизнь</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В бою</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1250</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
